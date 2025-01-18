@@ -1,25 +1,90 @@
 body {
-    /* background-image: url('./images/vecteezy_wildlife-elk-in-forest-nature-landscape-vector-illustration_.jpg');
+    background-image: url('./images/vecteezy_wildlife-elk-in-forest-nature-landscape-vector-illustration_.jpg');
     background-size: 100vw 100vh;
-    background-repeat: no-repeat; */
+    background-repeat: no-repeat;
     height: 100vh;
     width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin: 0;
 }
 
 .container {
     width: 30%;
-    height: 30%;
-    border: 1px solid black;
+    height: 20%;
+    font-family: 'Noticia Text';
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 50px 20px;
+    color: white;
+}
+
+.container h1 {
+    font-size: 35px;
+    margin-bottom: 20px;
 }
 
 form {
     display: flex;
-    
     gap: 10px;
 }
 
+#search-area {
+    flex: 1;
+    font-size: large;
+    padding: 15px;
+    border: 1px solid black;
+    border-radius: 20px;
+    background: Transparent no-repeat;
+    overflow: hidden;
+    outline: none;
+    color: white;
+    font-weight: 500;
+}
+
+#search-button {
+    flex: 1;
+    max-width: 90px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid black;
+    border-radius: 20px;
+    font-size:medium;
+    background: Transparent no-repeat;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+    color: white;
+}
+
+#search-button:hover {
+    background-color: rgb(213, 239, 239);
+    opacity: 0.3;
+    color: #000;
+}
+
+::placeholder {
+    color: white;
+    opacity: 0.7;
+}
+
+body::after {
+    content: '';
+    display: block;
+    height: 30px;
+  }
+  
+  footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    color: white;
+    font-size: large;
+    padding-bottom: 10px;
+  }
