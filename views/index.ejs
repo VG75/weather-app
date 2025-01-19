@@ -20,12 +20,12 @@
                
                 <!--toggle-->
                 <div>
-                    <span id="labelF">F</span>
+                    <span id="labelF">C</span>
                     <label class="switch">
                         <input type="checkbox" id="tempToggle">
                         <span class="slider round"></span>
                     </label>
-                    <span id="labelC">C</span>
+                    <span id="labelC">F</span>
                 </div>
             </div>
             <h1><%= data.location.name  %>, <%= data.location.country %></h1>
@@ -45,7 +45,12 @@
                     <span>Wind:<%= data.current.wind_kph %> kph</span>
                 </div>
             </div>
+            <input type="hidden" id="tempC" value="<%= data.current.temp_c %>">
+            <input type="hidden" id="tempF" value="<%= data.current.temp_f %>">
+            <input type="hidden" id="feelsC" value="<%= data.current.feelslike_c %>">
+            <input type="hidden" id="feelsF" value="<%= data.current.feelslike_f %>">
         </div>
+        
     <% }else { %>
         <div class="container">
             <h1>Enter your city name</h1>
@@ -62,5 +67,8 @@
     <footer>
         Copyright © Vageesha G 2025
     </footer>
+
+
+<script src="/script.js"></script>
 </body>
 </html>
