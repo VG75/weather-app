@@ -11,6 +11,8 @@ body {
     margin: 0;
 }
 
+/*Main page styling*/
+
 .container {
     width: 30%;
     height: 20%;
@@ -71,20 +73,174 @@ form {
     color: white;
     opacity: 0.7;
 }
+/*weather page styling*/
+.container-weather{
+    width: 40%;
+    height: 60%;
+    
+    color: white;
+
+}
+
+#back {
+    width: 35px;
+    height: 35px;
+}
+
+#back:hover {
+    opacity: 0.6;
+}
+
+/*Toggle swith*/
+#labelF, #labelC {
+    font-size: 23px;
+    margin: 0 10px;
+    cursor: pointer;
+    font-weight: 800;
+    color: #000;
+}
+
+#labelF.active, #labelC.active {
+    font-weight: bold;
+    color: #000;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #89bde7;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+.nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-weather h1 {
+    font-family: 'Noticia Text';
+    font-size: 45px;
+    margin-left: 40px;
+}
+
+.inner-container {
+    display: flex;
+    justify-content: space-between;
+    margin: auto 40px;
+}
+.inner-container h1,p,h3 {
+    margin: 0;
+    padding: 0;
+}
+
+.first-box {
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid black;
+    flex: 1;
+}
+.second-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    flex: 1;
+    gap: 15px;
+    font-family:'Noticia Text';
+}
+
+.time {
+    font-family:'Noticia Text';
+    font-size: large;
+    font-weight: 600;
+}
+
+.main-temp {
+    font-size: 5rem; 
+    font-family: 'Noticia Text';
+   
+}
+
+.temp-unit {
+    font-size: 1.5rem; /* Smaller font size for the unit */
+    vertical-align: top; /* Align the unit slightly above */
+    /* Example: grey color */
+}
+
+#icon {
+    opacity: 1;
+    width: 75px;
+    height: 75px;
+}
+
+#feels {
+    font-family: 'Noticia Text';
+    font-size: medium;
+}
+
+.second-box h3 {
+    color: white;
+    font-size: 25px;
+    font-weight: 900;
+}
+
+.second-box span {
+    font-weight: 700;
+}
+
+/*Footer styling*/
 
 body::after {
     content: '';
     display: block;
     height: 30px;
-  }
+}
+
+
   
-  footer {
+footer {
     position: absolute;
     bottom: 0;
     width: 100%;
     height: 30px;
     text-align: center;
-    color: white;
+    color: black;
     font-size: large;
     padding-bottom: 10px;
-  }
+}

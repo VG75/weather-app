@@ -16,7 +16,7 @@ app.use(express.static("public"));
 
 
 app.get("/", (req, res) => {
-    res.sendFile("index.html", { root: __dirname });
+    res.render("index.ejs", { root: __dirname });
 });
 
 app.listen(port, () => {

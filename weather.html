@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./public/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Noticia+Text:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sixtyfour+Convergence&family=Workbench&display=swap" rel="stylesheet">
+    <title>weather-app</title>
+</head>
+<body>
+    <div class="container-weather">
+        <div class="nav">
+            <!--img-->
+            <a href="/">
+                <img src="./public/images/back.png" alt="back icon" id="back">
+            </a>
+           
+            <!--toggle-->
+            <div>
+                <span id="labelF">F</span>
+                <label class="switch">
+                    <input type="checkbox" id="tempToggle">
+                    <span class="slider round"></span>
+                </label>
+                <span id="labelC">C</span>
+            </div>
+        </div>
+        <h1>Jaipur, India</h1>
+        <div class="inner-container">
+            <div class="first-box"> 
+                <span class="time">Now</span>
+                <div>
+                    <span class="main-temp">15</span><sup class="temp-unit">°C</sup>
+                    <img src="//cdn.weatherapi.com/weather/64x64/night/143.png" alt="" id="icon">
+                </div>
+                <span id="feels">Feels like 15<sup>°C</sup></span>
+            </div>
+            <div class="second-box"> 
+                <h3>Sunny</h3>
+                <span>precip: 0%</span>
+                <span>Humididty: 66%</span>
+                <span>Wind: 7.kph</span>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        Copyright © Vageesha G 2025
+    </footer>
+</html>
