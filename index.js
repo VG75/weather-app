@@ -32,8 +32,8 @@ app.post("/city", async (req, res) => {
                 aqi: "no"
             }
         });
+        res.render("index.ejs", {data: result.data});
         
-       
       } catch (error) {
         let errorMessage = error.response.data.error.message;
         res.render("index.ejs", {error: errorMessage});

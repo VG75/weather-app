@@ -11,7 +11,41 @@
 </head>
 <body>
     <% if (locals.data) { %>
-        
+        <div class="container-weather">
+            <div class="nav">
+                <!--img-->
+                <a href="/">
+                    <img src="/images/back.png" alt="back icon" id="back">
+                </a>
+               
+                <!--toggle-->
+                <div>
+                    <span id="labelF">F</span>
+                    <label class="switch">
+                        <input type="checkbox" id="tempToggle">
+                        <span class="slider round"></span>
+                    </label>
+                    <span id="labelC">C</span>
+                </div>
+            </div>
+            <h1><%= data.location.name  %>, <%= data.location.country %></h1>
+            <div class="inner-container">
+                <div class="first-box"> 
+                    <span class="time">Now</span>
+                    <div>
+                        <span class="main-temp"><%=data.current.temp_c%></span><sup class="temp-unit">°C</sup>
+                        <img src=<%= data.current.condition.icon %> alt="" id="icon">
+                    </div>
+                    <span id="feels">Feels like <%= data.current.feelslike_c  %><sup>°C</sup></span>
+                </div>
+                <div class="second-box"> 
+                    <h3><%= data.current.condition.text %></h3>
+                    <span>precip: <%= data.current.precip_mm %> mm</span>
+                    <span>Humididty:<%= data.current.humidity %> %</span>
+                    <span>Wind:<%= data.current.wind_kph %> kph</span>
+                </div>
+            </div>
+        </div>
     <% }else { %>
         <div class="container">
             <h1>Enter your city name</h1>
