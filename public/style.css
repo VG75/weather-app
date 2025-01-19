@@ -1,7 +1,6 @@
 body {
-    background-image: url('./images/vecteezy_wildlife-elk-in-forest-nature-landscape-vector-illustration_.jpg');
+    background: url('./images/vecteezy_wildlife-elk-in-forest-nature-landscape-vector-illustration_.jpg');
     background-size: 100vw 100vh;
-    background-repeat: no-repeat;
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -12,8 +11,11 @@ body {
 }
 
 /*Main page styling*/
-
+h1, p {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Adds a glow effect */
+}
 .container {
+   
     width: 30%;
     height: 20%;
     font-family: 'Noticia Text';
@@ -72,6 +74,13 @@ form {
 ::placeholder {
     color: white;
     opacity: 0.7;
+}
+
+.container p {
+    color: red;
+    font-size: smaller;
+    text-align: left;
+    font-weight: 700;
 }
 /*weather page styling*/
 .container-weather{

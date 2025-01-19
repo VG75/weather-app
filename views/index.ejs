@@ -10,12 +10,20 @@
     <title>weather-app</title>
 </head>
 <body>
-    <div class="container">
-        <h1>Enter your city name</h1>
-        <form action="/city" method="post">
-            <input type="text" placeholder="Enter city name..." id="search-area">
-            <button id="search-button">Search</button>
-        </form>
+    <% if (locals.data) { %>
+        
+    <% }else { %>
+        <div class="container">
+            <h1>Enter your city name</h1>
+            <form action="/city" method="post">
+                <input type="text" placeholder="Enter city name..." id="search-area" name="city">
+                <button id="search-button">Search</button>
+            </form>
+            <% if (locals.error) { %>
+                <p>*No matching location found</p>
+            <% } %>
+    <% } %>
+        
     </div>
     <footer>
         Copyright © Vageesha G 2025
